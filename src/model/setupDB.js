@@ -21,6 +21,8 @@ let expenseData = [
     { expenseId: "EX1006", date: "2019-12-29", category: "Grocery", amount: 100, comments: "Purchased Onions" }
 ]
 
+
+
 exports.userSetup = () => {
     return connection.getUserCollection().then((userCollection) => {
         return userCollection.deleteMany().then(() => {
