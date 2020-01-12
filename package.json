@@ -1,0 +1,19 @@
+{
+  "name": "expense-app-server",
+  "version": "1.0.0",
+  "description": "Hey there,this is a expense app with node, expres and mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemanthReddy17/expense-app-server.git"
+  },
+  "author": "HemanthReddy17",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HemanthReddy17/expense-app-server/issues"
+  },
+  "homepage": "https://github.com/HemanthReddy17/expense-app-server#readme"
+}
