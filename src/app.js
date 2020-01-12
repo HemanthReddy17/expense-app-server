@@ -1,10 +1,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var errorLogger=require("./utilities/errorLogger")
-var requestLogger=require("./utilities/requestLogger")
+var errorLogger = require("./utilities/errorLogger")
+var requestLogger = require("./utilities/requestLogger")
 
-var routes=require("./routes/router")
+var routes = require("./routes/router")
 
 var cors = require('cors');
 
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use(requestLogger)
-app.use("/",routes)
+app.use("/", routes)
 app.use(errorLogger)
 
 app.listen(5000)
