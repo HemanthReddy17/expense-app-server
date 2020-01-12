@@ -20,20 +20,53 @@ var userSchema = Schema({
 //IncomeSchema
 var incomeSchema = Schema({
     incomeId: { type: String, unique: true },
-    date:{type:Date,default: Date.now},
-    category:{type: String,require: [true, "Required field"],default:"Others"},
-    amount:{type:Number,require: [true, "Required field"],default:0},
-    comments:{type:String}
+    date: { type: Date, default: Date.now },
+    category: { type: String, require: [true, "Required field"], default: "Others" },
+    amount: { type: Number, require: [true, "Required field"], default: 0 },
+    comments: { type: String }
 })
 
 //ExpenseSchema
 var expenseSchema = Schema({
     expenseId: { type: String, unique: true },
-    date:{type:Date,default: Date.now},
-    category:{type: String,require: [true, "Required field"],default:"Others"},
-    amount:{type:Number,require: [true, "Required field"],default:0},
-    comments:{type:String}
+    date: { type: Date, default: Date.now },
+    category: { type: String, require: [true, "Required field"], default: "Others" },
+    amount: { type: Number, require: [true, "Required field"], default: 0 },
+    comments: { type: String }
 })
 
 
+var collection = {}
 
+collection.getUserCollection = () => {
+    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+        return database.model("Users", userSchema)
+    }).catch(() => {
+        let err = new Error("Could not connect to Database");
+        err.status = 500;
+        throw err;
+    })
+}
+
+collection.incomeCollection = () => {
+    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+        return database.model("Incomes", incomeSchema)
+    }).catch(() => {
+        let err = new Error("Could not connect to Database");
+        err.status = 500;
+        throw err;
+    })
+}
+
+
+collection.expenseCollection = () => {
+    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+        return database.model("Expense", expenseSchema)
+    }).catch(() => {
+        let err = new Error("Could not connect to Database");
+        err.status = 500;
+        throw err;
+    })
+}
+
+module.exports = collection
