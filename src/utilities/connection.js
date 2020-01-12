@@ -42,7 +42,7 @@ collection.getUserCollection = () => {
     return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
         return database.model("Users", userSchema)
     }).catch(() => {
-        let err = new Error("Could not connect to Database");
+        let err = new Error("Could not connect to Database user collection");
         err.status = 500;
         throw err;
     })
@@ -52,7 +52,7 @@ collection.incomeCollection = () => {
     return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
         return database.model("Incomes", incomeSchema)
     }).catch(() => {
-        let err = new Error("Could not connect to Database");
+        let err = new Error("Could not connect to Database in income collection");
         err.status = 500;
         throw err;
     })
@@ -63,7 +63,7 @@ collection.expenseCollection = () => {
     return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
         return database.model("Expense", expenseSchema)
     }).catch(() => {
-        let err = new Error("Could not connect to Database");
+        let err = new Error("Could not connect to Database in expense collection");
         err.status = 500;
         throw err;
     })
