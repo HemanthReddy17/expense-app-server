@@ -13,7 +13,7 @@ var userSchema = Schema({
     password: { type: String, required: [true, "Required field"] },
     incomes: { type: [String] },
     expensess: { type: [String] },
-    totalamount: { type: Number }
+    totalAmount: { type: Number,default: 0}
 })
 
 
@@ -39,7 +39,7 @@ var expenseSchema = Schema({
 var collection = {}
 
 collection.getUserCollection = () => {
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then((database) => {
         return database.model("Users", userSchema)
     }).catch(() => {
         let err = new Error("Could not connect to Database user collection");
@@ -49,7 +49,7 @@ collection.getUserCollection = () => {
 }
 
 collection.incomeCollection = () => {
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then((database) => {
         return database.model("Incomes", incomeSchema)
     }).catch(() => {
         let err = new Error("Could not connect to Database in income collection");
@@ -60,7 +60,7 @@ collection.incomeCollection = () => {
 
 
 collection.expenseCollection = () => {
-    return Mongoose.connect(url, { useNewUrlParser: true }).then((database) => {
+    return Mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }).then((database) => {
         return database.model("Expense", expenseSchema)
     }).catch(() => {
         let err = new Error("Could not connect to Database in expense collection");
