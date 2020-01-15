@@ -1,4 +1,5 @@
 var userModel = require("../model/users")
+var validator = require("./userValidator")
 var userService = {}
 
 
@@ -30,8 +31,11 @@ userService.login = (userId, password) => {
 //     })
 // }
 
-userService.register=(userData)=>{
-    return userModel.registerUser(userData).then((response)=>{
+userService.register = (userData) => {
+    validator.userEmailValidate(userData.emailId)
+    validator.userPhoneValidate(userData.contactNo)
+    validator.userPasswordValidate(userData.password)
+    return userModel.registerUser(userData).then((response) => {
         return response
     })
 }

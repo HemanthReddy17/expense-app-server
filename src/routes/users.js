@@ -12,6 +12,7 @@ router.post("/login", (req, res, next) => {
 
 router.post("/register", (req, res, next) => {
     userService.register(req.body).then((response) => {
+        res.status(201)
         res.json(response)
     }).catch(err => next(err))
 })
