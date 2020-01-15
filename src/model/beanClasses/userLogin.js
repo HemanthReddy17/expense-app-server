@@ -10,5 +10,3 @@ class UserLogin {
 }
 
 module.exports = UserLogin;
-
-// {userId: "US1003", firstName: "Test User1", lastName: "test", emailId: "test1@gmail.com", contactNo: 83737373737, password: "hemanth" }

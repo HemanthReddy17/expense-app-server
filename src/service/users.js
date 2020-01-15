@@ -3,6 +3,7 @@ var userService = {}
 
 
 userService.login = (userId, password) => {
+    // console.log(userId)
     return userModel.checkUser(userId).then((userBool) => {
         if (!userBool) {
             let err = new Error("You Haven't Registered Yet! Please Register..!!")

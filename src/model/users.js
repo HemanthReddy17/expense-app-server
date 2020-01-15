@@ -22,7 +22,7 @@ usersDB.getPassword = (userId, password) => {
     return dataModel.getUserCollection().then((collection) => {
         return collection.findOne({ emailId: userId, password: password }, { _id: 0 }).then((userData) => {
             if (userData) {
-                return new userBeenModel(userData)
+                return new userBeenModelReturn(userData)
             } else {
                 return false
             }
@@ -47,7 +47,6 @@ usersDB.generateUserId = () => {
 
 
 usersDB.registerUser = (data) => {
-    // console.log(userBeenData)
     return dataModel.getUserCollection().then((registerUser) => {
         return usersDB.checkUser(data.emailId).then((userData) => {
             if (userData) {
@@ -58,13 +57,11 @@ usersDB.registerUser = (data) => {
                 return usersDB.generateUserId().then(id => {
                     data.userId = id
                     let userBeenData = new userBeenModelRegister(data)
-                    // console.log(userBeenData)
                     return registerUser.create(userBeenData).then((insertData) => {
                         if (insertData) {
                             return ("You are registered succesfully with the user ID : " + userBeenData.userId);
-                        }else{
+                        } else {
                             let err = new Error("Registration unsuccessfull");
-                            // err.message();
                             err.status = 500;
                             throw err;
                         }

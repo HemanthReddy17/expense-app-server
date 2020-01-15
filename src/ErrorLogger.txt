@@ -123,3 +123,67 @@ Error: Already Registered
 Error: Already Registered
     at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:54:27)
     at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+SyntaxError: Unexpected token } in JSON at position 63
+    at JSON.parse (<anonymous>)
+    at parse (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\body-parser\lib\types\json.js:89:19)
+    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\raw-body\index.js:224:16)
+    at done (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:9:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ReferenceError: userBeenModel is not defined
+    at collection.findOne.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:27:17)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ReferenceError: userBeenModel is not defined
+    at collection.findOne.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:25:17)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ReferenceError: userBeenModel is not defined
+    at collection.findOne.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:25:17)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+ReferenceError: userBeenModel is not defined
+    at collection.findOne.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:25:17)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Wrong Password
+    at userModel.getPassword.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:17:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:9:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:9:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:9:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Already Registered
+    at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:53:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Already Registered
+    at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:53:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
