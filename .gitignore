@@ -2,3 +2,5 @@
 /node_modules
 ./src/RequestLogger
 
+src/ErrorLogger.txt
+src/RequestLogger.txt

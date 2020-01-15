@@ -242,3 +242,9 @@ Wed Jan 15 2020 23:30:42 GMT+0530 (India Standard Time) POST /users/login
 Wed Jan 15 2020 23:30:47 GMT+0530 (India Standard Time) POST /income/addIncomeData
 Wed Jan 15 2020 23:30:58 GMT+0530 (India Standard Time) POST /users/login
 Wed Jan 15 2020 23:31:09 GMT+0530 (India Standard Time) GET /income/showIncomes
+Wed Jan 15 2020 23:41:08 GMT+0530 (India Standard Time) GET /income/showIncomes
+Wed Jan 15 2020 23:41:17 GMT+0530 (India Standard Time) POST /income/addIncomeData
+Wed Jan 15 2020 23:41:23 GMT+0530 (India Standard Time) GET /income/showIncomes
+Wed Jan 15 2020 23:41:27 GMT+0530 (India Standard Time) POST /users/login
+Wed Jan 15 2020 23:44:25 GMT+0530 (India Standard Time) GET /users/logout
+Wed Jan 15 2020 23:44:28 GMT+0530 (India Standard Time) POST /income/addIncomeData

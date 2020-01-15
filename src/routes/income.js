@@ -24,7 +24,7 @@ router.post("/addIncomeData", (req, res, next) => {
     } else {
         let incomeData = req.body
         incomeData.userId = req.cookies.userDataCookie.userId
-        incomeService.addData(incomeData,req.cookies.userDataCookie.totalAmount).then(data => {
+        incomeService.addData(incomeData, req.cookies.userDataCookie.totalAmount).then(data => {
             res.send(data)
         })
     }

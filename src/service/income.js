@@ -15,10 +15,10 @@ incomeService.getIncome = (userId) => {
     })
 }
 
-// dddd
 
-incomeService.addData = (incomeData,totalAmount) => {
-    return incomeModel.addIncomeData(incomeData,totalAmount).then(data => {
+
+incomeService.addData = (incomeData, totalAmount) => {
+    return incomeModel.addIncomeData(incomeData, totalAmount).then(data => {
         return data
     })
 }
