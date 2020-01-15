@@ -19,6 +19,7 @@ var userSchema = Schema({
 
 //IncomeSchema
 var incomeSchema = Schema({
+    userId:{type:String,require: [true, "Required field"]},
     incomeId: { type: String, unique: true },
     date: { type: Date, default: Date.now },
     category: { type: String, require: [true, "Required field"], default: "Others" },
@@ -28,6 +29,7 @@ var incomeSchema = Schema({
 
 //ExpenseSchema
 var expenseSchema = Schema({
+    userId:{type:String,require: [true, "Required field"]},
     expenseId: { type: String, unique: true },
     date: { type: Date, default: Date.now },
     category: { type: String, require: [true, "Required field"], default: "Others" },

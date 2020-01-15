@@ -5,6 +5,7 @@ var userService = require("../service/users")
 
 router.post("/login", (req, res, next) => {
     userService.login(req.body.userId, req.body.password).then((userData) => {
+        // console.log(req.cookies)
         res.cookie("userDataCookie", userData);
         res.json(userData)
     }).catch(err => next(err))
@@ -22,6 +23,8 @@ router.post("/register", (req, res, next) => {
 router.get("/logout",(req,res,next)=>{
     res.clearCookie("userDataCookie")
     res.json({"meassage":"Sucessfully Logged Out"})
+    // console.log("hhhhh"+JSON.stringify(req.cookies))
+
 })
 
 

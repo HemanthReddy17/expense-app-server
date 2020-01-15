@@ -1,5 +1,5 @@
 var userModel = require("../model/users")
-var validator = require("./userValidator")
+var validator = require("./validators/userValidator")
 var userService = {}
 
 

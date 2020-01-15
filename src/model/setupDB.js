@@ -7,19 +7,19 @@ let userData = [
 ]
 
 let incomeData = [
-    { incomeId: "IN1001", date: "2019-12-09", category: "Salary", amount: 20000, comments: "Credited from Infosys Account" },
-    { incomeId: "IN1002", date: "2020-01-15", category: "Friend", amount: 2000, comments: "Credited from Friend Account" },
-    { incomeId: "IN1003", date: "2019-12-21", category: "Friend", amount: 22000, comments: "Credited from Infosys Account" }
+    { userId: "US1001", incomeId: "IN1001", date: "2019-12-09", category: "Salary", amount: 20000, comments: "Credited from Infosys Account" },
+    { userId: "US1001", incomeId: "IN1002", date: "2020-01-15", category: "Friend", amount: 2000, comments: "Credited from Friend Account" },
+    { userId: "US1002", incomeId: "IN1003", date: "2019-12-21", category: "Friend", amount: 22000, comments: "Credited from Infosys Account" }
 ]
 
 
 let expenseData = [
-    { expenseId: "EX1001", date: "2019-12-10", category: "Grocery", amount: 300, comments: "Purchased Onions" },
-    { expenseId: "EX1002", date: "2019-12-15", category: "Grocery", amount: 100, comments: "Purchased Onions" },
-    { expenseId: "EX1003", date: "2019-12-10", category: "Grocery", amount: 6000, comments: "Purchased Onions" },
-    { expenseId: "EX1004", date: "2019-12-17", category: "Grocery", amount: 1000, comments: "Purchased Onions" },
-    { expenseId: "EX1005", date: "2019-12-18", category: "Grocery", amount: 400, comments: "Purchased Onions" },
-    { expenseId: "EX1006", date: "2019-12-29", category: "Grocery", amount: 100, comments: "Purchased Onions" }
+    { userId: "US1001", expenseId: "EX1001", date: "2019-12-10", category: "Grocery", amount: 300, comments: "Purchased Onions" },
+    { userId: "US1001", expenseId: "EX1002", date: "2019-12-15", category: "Grocery", amount: 100, comments: "Purchased Onions" },
+    { userId: "US1001", expenseId: "EX1003", date: "2019-12-10", category: "Grocery", amount: 6000, comments: "Purchased Onions" },
+    { userId: "US1002", expenseId: "EX1004", date: "2019-12-17", category: "Grocery", amount: 1000, comments: "Purchased Onions" },
+    { userId: "US1002", expenseId: "EX1005", date: "2019-12-18", category: "Grocery", amount: 400, comments: "Purchased Onions" },
+    { userId: "US1002", expenseId: "EX1006", date: "2019-12-29", category: "Grocery", amount: 100, comments: "Purchased Onions" }
 ]
 
 
