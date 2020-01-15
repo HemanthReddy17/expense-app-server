@@ -6,28 +6,55 @@ var usersDB = {}
 
 
 usersDB.checkUser = (userId) => {
-    return dataModel.getUserCollection().then((collection) => {
-        return collection.findOne({ emailId: userId }).then((userData) => {
-            if (userData) {
-                return true
-            } else {
-                return false
-            }
+    let emailIdPattren = /^([A-z0-9]+)@([A-z]+)([.]com)$/
+    if (emailIdPattren.test(userId)) {
+        return dataModel.getUserCollection().then((collection) => {
+            return collection.findOne({ emailId: userId }).then((userData) => {
+                if (userData) {
+                    return true
+                } else {
+                    return false
+                }
+            })
         })
-    })
+    } else {
+        return dataModel.getUserCollection().then((collection) => {
+            return collection.findOne({ contactNo: userId }).then((userData) => {
+                if (userData) {
+                    return true
+                } else {
+                    return false
+                }
+            })
+        })
+    }
+
 }
 
 
 usersDB.getPassword = (userId, password) => {
-    return dataModel.getUserCollection().then((collection) => {
-        return collection.findOne({ emailId: userId, password: password }, { _id: 0 }).then((userData) => {
-            if (userData) {
-                return new userBeenModelReturn(userData)
-            } else {
-                return false
-            }
+    let emailIdPattren = /^([A-z0-9]+)@([A-z]+)([.]com)$/
+    if (emailIdPattren.test(userId)) {
+        return dataModel.getUserCollection().then((collection) => {
+            return collection.findOne({ emailId: userId, password: password }, { _id: 0 }).then((userData) => {
+                if (userData) {
+                    return new userBeenModelReturn(userData)
+                } else {
+                    return false
+                }
+            })
         })
-    })
+    } else {
+        return dataModel.getUserCollection().then((collection) => {
+            return collection.findOne({ contactNo: userId, password: password }, { _id: 0 }).then((userData) => {
+                if (userData) {
+                    return new userBeenModelReturn(userData)
+                } else {
+                    return false
+                }
+            })
+        })
+    }
 }
 
 

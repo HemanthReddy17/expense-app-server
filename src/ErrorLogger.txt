@@ -1,27 +1,10 @@
-Error: Invalid email! The emailid should be of the following format: example@exm.com
-    at Object.validator.userEmailValidate (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\userValidator.js:6:19)
-    at Object.userService.register (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:36:15)
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:15:17)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
-    at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:281:22
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
-    at Function.handle (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:174:3)
-    at router (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-Error: Already Registered
-    at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:53:27)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:10:23)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-Error: Invalid Phone Number!
-    at Object.validator.userPhoneValidate (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\userValidator.js:15:19)
-    at Object.userService.register (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:36:15)
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:14:17)
+TypeError: emailIdPattren.test is not a function
+    at Object.usersDB.checkUser (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:10:24)
+    at Object.userService.login (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:8:22)
+    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:7:17)
     at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
     at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
     at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
@@ -35,60 +18,24 @@ Error: Invalid Phone Number!
     at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
     at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
     at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-Error: Invalid Phone Number!
-    at Object.validator.userPhoneValidate (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\userValidator.js:15:19)
-    at Object.userService.register (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:36:15)
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:14:17)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
-    at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:281:22
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
-    at Function.handle (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:174:3)
-    at router (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-Error: Already Registered
-    at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:53:27)
+Error: Wrong Password
+    at userModel.getPassword.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:18:31)
     at process._tickCallback (internal/process/next_tick.js:68:7)
-Error: Invalid Password! It should contain 1 Number and 1 caps lock. Should have 8 chars
-    at Object.validator.userPasswordValidate (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\userValidator.js:24:19)
-    at Object.userService.register (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:37:15)
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:14:17)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
-    at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:281:22
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
-    at Function.handle (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:174:3)
-    at router (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-Error: Invalid Password! It should contain 1 Number and 1 caps lock. Should have 8 chars
-    at Object.validator.userPasswordValidate (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\userValidator.js:24:19)
-    at Object.userService.register (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:37:15)
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\users.js:14:17)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
-    at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:281:22
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
-    at Function.handle (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:174:3)
-    at router (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:47:12)
-    at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
-    at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
-    at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-Error: Already Registered
-    at usersDB.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\users.js:53:27)
+Error: Wrong Password
+    at userModel.getPassword.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:18:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Wrong Password
+    at userModel.getPassword.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:18:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:10:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+TypeError: Cannot read property 'then' of undefined
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:14:59)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:10:23)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: You Haven't Registered Yet! Please Register..!!
+    at userModel.checkUser.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\service\users.js:10:23)
     at process._tickCallback (internal/process/next_tick.js:68:7)
