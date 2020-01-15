@@ -3,7 +3,7 @@ const connection = require("../utilities/connection")
 let userData = [
     { userId: "US1001", firstName: "Hemanth Reddy", lastName: "K", emailId: "khreddy11@gmail.com", contactNo: 8125457899, password: "hemanth", incomes: ["IN1001", "IN1002"], expensess: ["EX1001", "EX1002", "EX1003"], totalAmount: 15700 },
     { userId: "US1002", firstName: "Test User", lastName: "K", emailId: "test@gmail.com", contactNo: 9999999999, password: "hemanth", incomes: ["IN1003"], expensess: ["EX1004", "EX1005", "EX1006"], totalAmount: 20500 },
-    {userId: "US1003", firstName: "Test User1", lastName: "test", emailId: "test1@gmail.com", contactNo: 83737373737, password: "hemanth" }
+    { userId: "US1003", firstName: "Test User1", lastName: "test", emailId: "test1@gmail.com", contactNo: 83737373737, password: "hemanth" }
 ]
 
 let incomeData = [

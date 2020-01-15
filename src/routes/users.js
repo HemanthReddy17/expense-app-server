@@ -5,6 +5,7 @@ var userService = require("../service/users")
 
 router.post("/login", (req, res, next) => {
     userService.login(req.body.userId, req.body.password).then((userData) => {
+        res.cookie("userDataCookie", userData);
         res.json(userData)
     }).catch(err => next(err))
 })
@@ -17,6 +18,11 @@ router.post("/register", (req, res, next) => {
     }).catch(err => next(err))
 })
 
+
+router.get("/logout",(req,res,next)=>{
+    res.clearCookie("userDataCookie")
+    res.json({"meassage":"Sucessfully Logged Out"})
+})
 
 
 // router.get("/gid", (req, res, next) => {

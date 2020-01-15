@@ -28,7 +28,6 @@ usersDB.checkUser = (userId) => {
             })
         })
     }
-
 }
 
 
