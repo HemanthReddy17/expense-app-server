@@ -30,6 +30,34 @@ router.post("/addIncomeData", (req, res, next) => {
     }
 })
 
+
+router.put("/editIncome/:incomeId", (req, res, next) => {
+    let incomeId = req.params.incomeId;
+    let userData = req.cookies.userDataCookie;
+    if (req.cookies.userDataCookie === undefined) {
+        let err = new Error("Please Login...!!")
+        err.status = 401
+        next(err)
+    } else {
+        if (req.cookies.userDataCookie.incomes.includes(incomeId)) {
+            incomeService.editIncome(incomeId, req.body,userData).then((data) => {
+                res.json({message:data})
+            }).catch(err => { next(err) })
+        } else {
+            let err = new Error("You Can't Edit this")
+            err.status = 401
+            next(err)
+        }
+    }
+})
+
+
+
+
+
+
+
+
 // router.get("/gid",(req,res,next)=>{
 //     incomeService.gif().then(data=>{res.send(data)})
 // })

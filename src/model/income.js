@@ -55,4 +55,36 @@ incomeModel.addIncomeData = (incomeData, totalAmount) => {
     })
 }
 
+incomeModel.editIncome = (incomeId, incomeData, userData) => {
+    return dataModel.incomeCollection().then((incomeCollection) => {
+        return incomeCollection.findOne({ incomeId: incomeId }, { _id: 0 }).then((beforUpdateData) => {
+            if (beforUpdateData.amount != incomeData.amount || beforUpdateData.category != incomeData.category) {
+                return incomeCollection.updateOne(
+                    { incomeId: incomeId },
+                    {
+                        $set: { category: incomeData.category, amount: incomeData.amount, date: new Date() }
+                    }).then((updateData) => {
+                        if (updateData.nModified > 0) {
+                            return dataModel.getUserCollection().then(userCollection => {
+                                return userCollection.updateOne(
+                                    { userId: userData.userId },
+                                    { $set: { totalAmount: userData.totalAmount + incomeData.amount - beforUpdateData.amount } })
+                            }).then((userUpdated) => {
+                                return "Data Updated"
+                            })
+                        } else {
+                            let err = new Error("Update Failed")
+                            err.status = 404
+                            throw err
+                        }
+                    })
+            } else {
+                let err = new Error("No change to update")
+                err.status = 404
+                throw err
+            }
+        })
+    })
+}
+
 module.exports = incomeModel

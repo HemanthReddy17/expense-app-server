@@ -23,6 +23,14 @@ incomeService.addData = (incomeData, totalAmount) => {
     })
 }
 
+
+incomeService.editIncome = (incomeId,incomeData,userData) => {
+    return incomeModel.editIncome(incomeId, incomeData,userData).then(data => {
+        return data
+    })
+}
+
+
 // incomeService.gif=()=>{
 //     return incomeModel.generateIncomeId().then(data=>{return data})
 // }
