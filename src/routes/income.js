@@ -40,8 +40,8 @@ router.put("/editIncome/:incomeId", (req, res, next) => {
         next(err)
     } else {
         if (req.cookies.userDataCookie.incomes.includes(incomeId)) {
-            incomeService.editIncome(incomeId, req.body,userData).then((data) => {
-                res.json({message:data})
+            incomeService.editIncome(incomeId, req.body, userData).then((data) => {
+                res.json({ message: data })
             }).catch(err => { next(err) })
         } else {
             let err = new Error("You Can't Edit this")
@@ -52,7 +52,13 @@ router.put("/editIncome/:incomeId", (req, res, next) => {
 })
 
 
-
+router.delete("/deleteIncome/:incomeId", (req, res, next) => {
+    let incomeId = req.params.incomeId;
+    let userData = req.cookies.userDataCookie;
+    incomeService.deleIncome(incomeId, userData).then((data) => {
+        res.json({ message: data })
+    }).catch(err => next(err))
+})
 
 
 

@@ -87,4 +87,33 @@ incomeModel.editIncome = (incomeId, incomeData, userData) => {
     })
 }
 
+incomeModel.deleteIncome = (incomeId, userData) => {
+    // console.log(userData)
+    return dataModel.incomeCollection().then(incomeCollection => {
+        return incomeCollection.findOne({ incomeId: incomeId }).then(incomeByIdData => {
+            return incomeCollection.deleteOne({ incomeId: incomeId }).then(deleteData => {
+                if (deleteData.deletedCount >= 1) {
+                    return dataModel.getUserCollection().then(userCollection => {
+                        // console.log("object")
+                        return userCollection.updateOne(
+                            { userId: userData.userId },
+                            {
+                                $set: { totalAmount: userData.totalAmount - incomeByIdData.amount },
+                                $pull: { incomes: incomeId }
+                            },
+                            { multi: true }
+                        ).then((data) => {
+                            return `Sucessfully deleted for Income Id: ${incomeId}`
+                        })
+                    })
+                } else {
+                    let err = new Error("ExpenseId Not exist")
+                    err.status = 401
+                    throw err
+                }
+            })
+        })
+    })
+}
+
 module.exports = incomeModel

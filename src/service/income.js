@@ -31,6 +31,15 @@ incomeService.editIncome = (incomeId,incomeData,userData) => {
 }
 
 
+incomeService.deleIncome = (incomeId,userData)=>{
+    return incomeModel.deleteIncome(incomeId,userData).then(data=>{
+        return data
+    })
+}
+
+
+
+
 // incomeService.gif=()=>{
 //     return incomeModel.generateIncomeId().then(data=>{return data})
 // }

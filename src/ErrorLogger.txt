@@ -279,3 +279,36 @@ Error: No change to update
 Error: No change to update
     at incomeCollection.findOne.then (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:83:27)
     at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: ExpenseId Not exist
+    at incomeCollection.deleteOne.then.deleteData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:105:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: ExpenseId Not exist
+    at incomeCollection.deleteOne.then.deleteData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:106:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: ExpenseId Not exist
+    at incomeCollection.deleteOne.then.deleteData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:106:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\error\mongooseError.js:10:11)
+    at Function.Model.$handleCallbackError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:4778:11)
+    at _update (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3717:20)
+    at Function.updateOne (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3666:10)
+    at dataModel.getUserCollection.then.userCollection (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:96:43)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\error\mongooseError.js:10:11)
+    at Function.Model.$handleCallbackError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:4778:11)
+    at _update (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3717:20)
+    at Function.updateOne (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3666:10)
+    at dataModel.getUserCollection.then.userCollection (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:96:43)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: ExpenseId Not exist
+    at incomeCollection.deleteOne.then.deleteData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:108:27)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\error\mongooseError.js:10:11)
+    at Function.Model.$handleCallbackError (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:4778:11)
+    at _update (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3717:20)
+    at Function.updateOne (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\mongoose\lib\model.js:3666:10)
+    at dataModel.getUserCollection.then.userCollection (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:97:43)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
