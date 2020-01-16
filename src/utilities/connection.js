@@ -13,28 +13,28 @@ var userSchema = Schema({
     password: { type: String, required: [true, "Required field"] },
     incomes: { type: [String] },
     expensess: { type: [String] },
-    totalAmount: { type: Number,default: 0}
+    totalAmount: { type: Number, default: 0 }
 })
 
 
 //IncomeSchema
 var incomeSchema = Schema({
-    userId:{type:String,require: [true, "Required field"]},
+    userId: { type: String, require: [true, "Required field"] },
     incomeId: { type: String, unique: true },
     date: { type: Date, default: Date.now },
     category: { type: String, require: [true, "Required field"], default: "Others" },
     amount: { type: Number, require: [true, "Required field"], default: 0 },
-    comments: { type: String }
+    comments: { type: String, default: null }
 })
 
 //ExpenseSchema
 var expenseSchema = Schema({
-    userId:{type:String,require: [true, "Required field"]},
+    userId: { type: String, require: [true, "Required field"] },
     expenseId: { type: String, unique: true },
     date: { type: Date, default: Date.now },
     category: { type: String, require: [true, "Required field"], default: "Others" },
     amount: { type: Number, require: [true, "Required field"], default: 0 },
-    comments: { type: String }
+    comments: { type: String, default: null }
 })
 
 

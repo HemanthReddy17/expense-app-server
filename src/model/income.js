@@ -30,6 +30,7 @@ incomeModel.addIncomeData = (incomeData, totalAmount) => {
     return incomeModel.generateIncomeId().then(id => {
         incomeData.incomeId = id
         let newIncomeData = new incomeBeenClass(incomeData)
+        console.log(newIncomeData)
         return dataModel.incomeCollection().then(collection => {
             return collection.create(newIncomeData).then(data => {
                 // console.log(totalAmount)
