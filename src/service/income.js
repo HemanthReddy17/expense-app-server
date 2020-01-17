@@ -17,22 +17,22 @@ incomeService.getIncome = (userId) => {
 
 
 
-incomeService.addData = (incomeData, totalAmount) => {
-    return incomeModel.addIncomeData(incomeData, totalAmount).then(data => {
+incomeService.addData = (incomeData) => {
+    return incomeModel.addIncomeData(incomeData).then(data => {
         return data
     })
 }
 
 
-incomeService.editIncome = (incomeId,incomeData,userData) => {
-    return incomeModel.editIncome(incomeId, incomeData,userData).then(data => {
+incomeService.editIncome = (incomeId, incomeData, userId) => {
+    return incomeModel.editIncome(incomeId, incomeData, userId).then(data => {
         return data
     })
 }
 
 
-incomeService.deleIncome = (incomeId,userData)=>{
-    return incomeModel.deleteIncome(incomeId,userData).then(data=>{
+incomeService.deleIncome = (incomeId, userId) => {
+    return incomeModel.deleteIncome(incomeId, userId).then(data => {
         return data
     })
 }

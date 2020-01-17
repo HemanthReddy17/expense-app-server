@@ -25,8 +25,7 @@ router.post("/addExpense", (req, res, next) => {
     } else {
         let expenseData = req.body
         expenseData.userId = req.cookies.userDataCookie.userId
-        let totalAmout = req.cookies.userDataCookie.totalAmount
-        expenseService.addExpense(expenseData, totalAmout).then(data => {
+        expenseService.addExpense(expenseData).then(data => {
             res.send(data)
         })
     }
@@ -34,6 +33,35 @@ router.post("/addExpense", (req, res, next) => {
 
 
 
+router.put("/editExpense/:expenseId", (req, res, next) => {
+    let expenseId = req.params.expenseId
+    let userData = req.cookies.userDataCookie;
+    if (req.cookies.userDataCookie === undefined) {
+        let err = new Error("Please Login...!!")
+        err.status = 401
+        next(err)
+    } else {
+        expenseService.editExpense(expenseId, req.body, userData.userId).then((data) => {
+            res.json({ message: data })
+        }).catch(err => { next(err) })
+    }
+})
+
+
+router.delete("/deleteExpense/:expenseId", (req, res, next) => {
+    let expenseId = req.params.expenseId;
+    let userData = req.cookies.userDataCookie;
+    if (userData === undefined) {
+        let err = new Error("Please Login...!!")
+        err.status = 401
+        next(err)
+    } else {
+        expenseService.deleteExpense(expenseId,userData.userId).then(data => {
+            res.json({ message: data })
+        }).catch(err => next(err))
+    }
+
+})
 
 
 

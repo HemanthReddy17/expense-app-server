@@ -16,11 +16,23 @@ expenseService.getExpenses = (userId) => {
     })
 }
 
-expenseService.addExpense = (expenseData, totalAmount) => {
-    return expenseModel.addExpenseData(expenseData, totalAmount).then(data => {
+expenseService.addExpense = (expenseData) => {
+    return expenseModel.addExpenseData(expenseData).then(data => {
         return data
     })
+}
 
+expenseService.editExpense = (expenseId, expenseData, userId) => {
+    return expenseModel.editExpense(expenseId, expenseData, userId).then(data => {
+        return data
+    })
+}
+
+
+expenseService.deleteExpense=(expenseId,userId)=>{
+    return expenseModel.deleteExpense(expenseId,userId).then(data=>{
+        return data
+    })
 }
 
 module.exports = expenseService

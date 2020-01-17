@@ -1,11 +1,13 @@
 Error: Please Login...!!
-    at router.post (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\expense.js:22:19)
+    at router.delete (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\routes\income.js:55:19)
     at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
     at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:137:13)
     at Route.dispatch (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\route.js:112:3)
     at Layer.handle [as handle_request] (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\layer.js:95:5)
     at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:281:22
-    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
+    at param (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:354:14)
+    at param (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:365:14)
+    at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:410:3)
     at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
     at Function.handle (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:174:3)
     at router (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:47:12)
@@ -13,5 +15,12 @@ Error: Please Login...!!
     at trim_prefix (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:317:13)
     at E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:284:7
     at Function.process_params (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:335:12)
-    at next (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\node_modules\express\lib\router\index.js:275:10)
-    at RequestLogger (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\utilities\requestLogger.js:9:5)
+Error: Can't Delelet
+    at userCollection.findOne.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\expense.js:143:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Can't Delelet
+    at userCollection.findOne.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\expense.js:143:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Error: Doesn't Exist to delete
+    at userCollection.findOne.then.userData (E:\Infy\UI\Service_Backend\Projects\ExpeneseAppServer\expense-app-server\src\model\income.js:135:31)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
