@@ -4,6 +4,9 @@
   "description": "Hey there,this is a expense app with node, expres and mongodb",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start-prod": "cross-env NODE_ENV=production  nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +20,17 @@
   },
   "homepage": "https://github.com/HemanthReddy17/expense-app-server#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.7",
-    "nodemon": "^2.0.2"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.14",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
   }
 }

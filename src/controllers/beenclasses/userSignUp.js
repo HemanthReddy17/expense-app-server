@@ -1,6 +1,5 @@
-class UserLogin {
+class UserSignup {
     constructor(obj) {
-        this.userId = obj.userId;
         this.firstName = obj.firstName;
         this.lastName = obj.lastName;
         this.emailId = obj.emailId;
@@ -9,4 +8,4 @@ class UserLogin {
     }
 }
 
-module.exports = UserLogin;
+module.exports = UserSignup;
